@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1597964819 source:/home/angel/UTN/Github/laboratorio2-20202c/Clase 03/Estructuras/main.cpp
+	<iostream>
+	"participante.h"
+
+1597965667 /home/angel/UTN/Github/laboratorio2-20202c/Clase 03/Estructuras/participante.h
+	"fecha.h"
+
+1597965742 source:/home/angel/UTN/Github/laboratorio2-20202c/Clase 03/Estructuras/participante.cpp
+	<iostream>
+	"participante.h"
+
+1597964548 /home/angel/UTN/Github/laboratorio2-20202c/Clase 03/Estructuras/fecha.h
+
+1597964769 source:/home/angel/UTN/Github/laboratorio2-20202c/Clase 03/Estructuras/fecha.cpp
+	<iostream>
+	"fecha.h"
+
