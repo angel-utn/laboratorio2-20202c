@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1599163065 source:/home/angel/UTN/Github/laboratorio2-20202c/Clase 05/InterfazConConsola/ui.cpp
+	<iostream>
+	<cstring>
+	"ui.h"
+	"rlutil.h"
+
+1599162548 /home/angel/UTN/Github/laboratorio2-20202c/Clase 05/InterfazConConsola/ui.h
+
+1585255380 /home/angel/UTN/Github/laboratorio2-20202c/Clase 05/InterfazConConsola/rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1599169308 source:/home/angel/UTN/Github/laboratorio2-20202c/Clase 05/InterfazConConsola/main.cpp
+	<iostream>
+	<cstdio>
+	"ui.h"
+	"rlutil.h"
+
