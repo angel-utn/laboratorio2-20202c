@@ -6,16 +6,13 @@ using namespace std;
 using namespace rlutil;
 
 void initUI() {
-#ifdef _WIN32
+
     system("mode con: cols=80 lines=25");
 
     SetConsoleOutputCP(1252);
     SetConsoleCP(1252);
 
     setlocale(LC_ALL, "spanish");
-#else
-
-#endif
 
 
 }

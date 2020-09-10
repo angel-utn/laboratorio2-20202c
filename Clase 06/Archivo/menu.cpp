@@ -5,6 +5,7 @@ using namespace std;
 using namespace rlutil;
 #include "menu.h"
 #include "participante.h"
+#include "captura.h"
 
 void menuPrincipal(){
     initUI();
@@ -94,6 +95,7 @@ void menuCapturas() {
         cout << "2 - MODIFICAR CAPTURA" << endl;
         cout << "3 - LISTAR CAPTURA POR ID" << endl;
         cout << "4 - LISTAR TODAS LAS CAPTURAS (ORDENADAS x PESO) " << endl;
+        cout << "5 - ELIMINAR CAPTURA" << endl;
         cout << "------------------" << endl;
         cout << "0 - VOLVER" << endl;
         int pos;
@@ -102,7 +104,18 @@ void menuCapturas() {
 
         switch (pos) {
         case 1:
-            msj("Presiona cualquier tecla para continuar.", rlutil::WHITE, rlutil::GREEN);
+            Captura reg;
+
+            reg = cargar_captura();
+
+            if (guardar_captura(reg)) {
+                msj("Guardado con exito!", rlutil::WHITE, rlutil::GREEN);
+            }
+            else {
+                msj("No se pudo guardar", rlutil::WHITE, rlutil::RED);
+            }
+
+            
             break;
         case 2:
             
@@ -111,7 +124,18 @@ void menuCapturas() {
             
             break;
         case 4:
-            
+            listar_capturas();
+
+            msj("Presione cualquier tecla para continuar.", rlutil::WHITE, rlutil::GREEN);
+
+            break;
+        case 5:
+            if (baja_captura()) {
+                msj("Se elimino con exito!", rlutil::WHITE, rlutil::GREEN);
+            }
+            else {
+                msj("No se pudo eliminar", rlutil::WHITE, rlutil::RED);
+            }
             break;
         case 0:
                 return;

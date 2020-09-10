@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="captura.cpp" />
     <ClCompile Include="fecha.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
@@ -26,6 +27,7 @@
     <ClCompile Include="ui.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="captura.h" />
     <ClInclude Include="fecha.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="participante.h" />

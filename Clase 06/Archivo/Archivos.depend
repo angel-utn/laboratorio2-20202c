@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1599752408 source:c:\users\god-b\onedrive\documentos\github\laboratorio2-20202c\clase 06\archivo\fecha.cpp
+	"fecha.h"
+
+1599745154 c:\users\god-b\onedrive\documentos\github\laboratorio2-20202c\clase 06\archivo\fecha.h
+
+1599752952 source:c:\users\god-b\onedrive\documentos\github\laboratorio2-20202c\clase 06\archivo\main.cpp
+	"menu.h"
+
+1599752931 c:\users\god-b\onedrive\documentos\github\laboratorio2-20202c\clase 06\archivo\menu.h
+
+1599769336 source:c:\users\god-b\onedrive\documentos\github\laboratorio2-20202c\clase 06\archivo\menu.cpp
+	"ui.h"
+	"rlutil.h"
+	"menu.h"
+	"participante.h"
+
+1599770857 c:\users\god-b\onedrive\documentos\github\laboratorio2-20202c\clase 06\archivo\ui.h
+
+1599745154 c:\users\god-b\onedrive\documentos\github\laboratorio2-20202c\clase 06\archivo\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1599745154 c:\users\god-b\onedrive\documentos\github\laboratorio2-20202c\clase 06\archivo\participante.h
+	"fecha.h"
+
+1599762545 source:c:\users\god-b\onedrive\documentos\github\laboratorio2-20202c\clase 06\archivo\participante.cpp
+	"ui.h"
+	"rlutil.h"
+	"participante.h"
+
+1599770797 source:c:\users\god-b\onedrive\documentos\github\laboratorio2-20202c\clase 06\archivo\ui.cpp
+	<cstring>
+	"ui.h"
+	"rlutil.h"
+

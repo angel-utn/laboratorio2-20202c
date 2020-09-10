@@ -20,7 +20,7 @@ enum Orientation{
 void setColors(int foreColor = APP_FORECOLOR, int backColor = APP_BACKCOLOR);
 void bar(int foreColor, int backColor, int y=SCREEN_HEIGHT, int width=SCREEN_WIDTH);
 void title(const char *mensaje, int foreColor = APP_TITLEFORECOLOR, int backColor = APP_TITLEBACKCOLOR);
-void msj(const char *mensaje, int foreColor = APP_FORECOLOR, int backColor = APP_BACKCOLOR, int y = SCREEN_HEIGHT, Orientation o = Orientation::TEXT_LEFT);
+void msj(const char *mensaje, int foreColor = APP_FORECOLOR, int backColor = APP_BACKCOLOR, int y = SCREEN_HEIGHT, Orientation o = TEXT_CENTER);
 void delline(int line, int foreColor = APP_FORECOLOR, int backColor = APP_BACKCOLOR);
 void initUI();
 
