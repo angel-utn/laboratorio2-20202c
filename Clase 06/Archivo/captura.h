@@ -15,6 +15,7 @@ int cantidad_capturas();
 Captura cargar_captura();
 void mostrar_captura(Captura );
 void listar_capturas();
+void listar_capturas_memdin();
 
 bool baja_captura();
 

@@ -1,12 +1,10 @@
 #include <iostream>
 #include <cstdio>
 #include "captura.h"
-
 using namespace std;
-
+#include "ui.h"
 
 const char* FILE_CAPTURA = "datos/capturas.dat";
-
 
 int cantidad_capturas() {
 	int cantidad;
@@ -37,7 +35,61 @@ void mostrar_captura(Captura reg) {
 	cout << "Peso: " << reg.peso << endl;
 	cout << "Longitud: " << reg.longitud << endl;
 	cout << "Estado: " << reg.estado<< endl;
-	
+
+}
+
+
+void ordenar_capturas(Captura *vec, int tam){
+    int i, j, posmax;
+    Captura aux;
+    ///Selection sort
+    for(i=0; i<tam-1; i++){
+        posmax = i;
+        for(j=i+1; j<tam; j++){
+            if (vec[j].peso > vec[posmax].peso){
+                posmax = j;
+            }
+        }
+        aux = vec[i];
+        vec[i] = vec[posmax];
+        vec[posmax] = aux;
+    }
+}
+
+void listar_capturas_memdin(){
+    int cant = cantidad_capturas();
+    if (cant == 0){
+        return;
+    }
+
+    Captura *vec;
+    vec = (Captura *) malloc(cant * sizeof(Captura));
+    if (vec == NULL){
+        return;
+    }
+    FILE *p;
+    p = fopen(FILE_CAPTURA, "rb");
+    if (p == NULL){
+        free(vec);
+        return;
+    }
+    fread(vec, sizeof(Captura), cant, p);
+    fclose(p);
+
+    ordenar_capturas(vec, cant);
+
+    title("LISTADO CON MEMORIA DINÁMICA");
+    cout << endl << endl;
+    int i;
+    cout << "IDP\tEspecie\tPeso" << endl;
+    for(i=0; i<cant; i++){
+        //mostrar_captura(vec[i]);
+        cout << vec[i].idParticipante << "\t";
+        cout << vec[i].especie << "\t";
+        cout << vec[i].peso << "\t";
+        cout << endl;
+    }
+    free(vec);
 }
 
 void listar_capturas() {
@@ -53,13 +105,8 @@ void listar_capturas() {
 	Captura reg;
 
 	while (fread(&reg, sizeof(Captura), 1, pFile) == 1) {
-
-		if (reg.estado) {
-			mostrar_captura(reg);
-			cout << endl;
-		}
-
-		
+        mostrar_captura(reg);
+        cout << endl;
 	}
 
 
@@ -77,6 +124,7 @@ Captura cargar_captura() {
 	// TODO: Validar existencia del participante
 	cout << "Codigo Parcipante: ";
 	cin >> reg.idParticipante;
+
 
 	// TODO: Validar todo... xD
 	cout << "Hora: ";

@@ -1,5 +1,6 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
+#include <iomanip>
 #include "ui.h"
 #include "rlutil.h"
 using namespace rlutil;
@@ -12,8 +13,7 @@ Participante leer_participante(int pos){
     FILE *p = fopen(FILE_PARTICIPANTES, "rb");
     if (p == NULL){
         reg.codigo = 0;
-        return reg; 
-
+        return reg;
     }
     fseek(p, pos * sizeof(Participante), SEEK_SET);
     fread(&reg, sizeof(Participante), 1, p);
@@ -160,10 +160,18 @@ void listar_participantes(){
     title("LISTADO DE PARTICIPANTES");
     gotoxy(1, 5);
     int cant =  cantidad_participantes();
-    for(int i = 0; i<cant; i++){
-        Participante reg = leer_participante(i);
-        mostrar_participante(reg);
-        cout << endl;
+    if (cant > 0){
+        cout << left;
+        cout << setw(6) << "ID" << setw(20) << "Apellidos" << setw(20) << "Nombres" << setw(10) << "Género" << setw(10) << "Fecha";
+        cout << endl << "----------------------------------------------------------------------------" << endl;
+        for(int i = 0; i<cant; i++){
+            Participante reg = leer_participante(i);
+            cout << setw(6) << reg.codigo;
+            cout << setw(20) << reg.apellidos;
+            cout << setw(20) << reg.nombres;
+            cout << setw(10) << reg.genero;
+            mostrar_fecha(reg.nac);
+        }
     }
 }
 bool guardar_participante(Participante reg){

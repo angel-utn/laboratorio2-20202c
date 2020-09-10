@@ -83,6 +83,7 @@ void menuParticipantes(){
             break;
         }
         cin.ignore();
+        anykey();
     }
 }
 
@@ -115,16 +116,17 @@ void menuCapturas() {
                 msj("No se pudo guardar", rlutil::WHITE, rlutil::RED);
             }
 
-            
+
             break;
         case 2:
-            
+
             break;
         case 3:
-            
+
             break;
         case 4:
-            listar_capturas();
+            cls();
+            listar_capturas_memdin();
 
             msj("Presione cualquier tecla para continuar.", rlutil::WHITE, rlutil::GREEN);
 
@@ -141,6 +143,7 @@ void menuCapturas() {
                 return;
             break;
         }
-      
+        cin.ignore();
+        //anykey();
     }
 }
