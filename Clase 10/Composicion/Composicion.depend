@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1602198610 source:/home/angel/UTN/Github/laboratorio2-20202c/Clase 10/Composicion/fecha.cpp
+	<iostream>
+	"fecha.h"
+
+1602198575 /home/angel/UTN/Github/laboratorio2-20202c/Clase 10/Composicion/fecha.h
+
+1602199860 source:/home/angel/UTN/Github/laboratorio2-20202c/Clase 10/Composicion/examen.cpp
+	<iostream>
+	"examen.h"
+
+1602199758 /home/angel/UTN/Github/laboratorio2-20202c/Clase 10/Composicion/examen.h
+	"fecha.h"
+
