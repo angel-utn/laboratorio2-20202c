@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1602198610 source:/home/angel/UTN/Github/laboratorio2-20202c/Clase 11/Archivos/fecha.cpp
+	<iostream>
+	"fecha.h"
+
+1602198575 /home/angel/UTN/Github/laboratorio2-20202c/Clase 11/Archivos/fecha.h
+
+1602802460 source:/home/angel/UTN/Github/laboratorio2-20202c/Clase 11/Archivos/examen.cpp
+	<iostream>
+	"examen.h"
+	<cstdio>
+	<iomanip>
+
+1602801707 /home/angel/UTN/Github/laboratorio2-20202c/Clase 11/Archivos/examen.h
+	"fecha.h"
+
+1602802488 source:/home/angel/UTN/Github/laboratorio2-20202c/Clase 11/Archivos/main.cpp
+	<iostream>
+	"examen.h"
+

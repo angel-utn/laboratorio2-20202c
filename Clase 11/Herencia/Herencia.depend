@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1602805217 source:/home/angel/UTN/Github/laboratorio2-20202c/Clase 11/Herencia/alumno.cpp
+	<iostream>
+	"alumno.h"
+
+1602804950 /home/angel/UTN/Github/laboratorio2-20202c/Clase 11/Herencia/alumno.h
+	"persona.h"
+
+1602805274 /home/angel/UTN/Github/laboratorio2-20202c/Clase 11/Herencia/persona.h
+
+1602805226 source:/home/angel/UTN/Github/laboratorio2-20202c/Clase 11/Herencia/main.cpp
+	<iostream>
+	"persona.h"
+	"alumno.h"
+
+1602804978 source:/home/angel/UTN/Github/laboratorio2-20202c/Clase 11/Herencia/persona.cpp
+	<iostream>
+	<cstring>
+	"persona.h"
+
